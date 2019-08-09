@@ -28,6 +28,7 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 class MainScreen extends Component{ 
   render(){
+    var list = ["This is sentence", "This is sentence", "This is sentence","This is sentence","This is sentence",];
     return (
       <Fragment>
         <StatusBar barStyle="dark-content" />
@@ -37,10 +38,12 @@ class MainScreen extends Component{
             style={styles.scrollView}>
             <Container>
               <HeaderBar />
-              <Content>
-                <Text>
-                  This is Content Section
-                </Text>
+              <Content padder>
+                { 
+                  list.map( (verse) => {
+                    return <Text>{verse}</Text>
+                  }) 
+                }
               </Content>
             </Container>
           </ScrollView>
