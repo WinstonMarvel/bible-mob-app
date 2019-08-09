@@ -20,18 +20,13 @@ import {
   StatusBar,
 } from 'react-native';
 
-import { 
-  Container, 
-  Content, 
-  Button, 
-  Title 
-} from 'native-base'
+import { Container, Content } from 'native-base'
 
 import HeaderBar from '../components/HeaderBar'
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-class MainScreen extends Component{ 
+class BookScreen extends Component{ 
   render(){
     var list = ["This is sentence", "This is sentence", "This is sentence","This is sentence","This is sentence",];
     return (
@@ -44,16 +39,7 @@ class MainScreen extends Component{
             <Container>
               <HeaderBar />
               <Content padder>
-                {/* { 
-                  list.map( (verse) => {
-                    return <Text>{verse}</Text>
-                  }) 
-                } */}
-                <Button  onPress = { () => { { this.props.navigation.navigate('Book') } } }>
-                    <Title>
-                      Change to Book
-                    </Title>
-                </Button>
+               Book screen
               </Content>
             </Container>
           </ScrollView>
@@ -102,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MainScreen;
+export default BookScreen;

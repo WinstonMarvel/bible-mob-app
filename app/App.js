@@ -7,18 +7,19 @@
  */
 
 import React, { Component } from 'react';
-import MainScreen from './views/MainScreen';
+import RootScreen from './views/RootScreen';
 import store from './reducers/store';
 import { Provider } from 'react-redux';
 
-class App extends Component{
+class App extends Component{ 
   render(){
     return (
         <Provider store={store}>
-          <MainScreen /> 
+          <RootScreen /> 
         </Provider>
     );
   }
-};
+}; 
 
-export default App;
+export default App; 
+ 
